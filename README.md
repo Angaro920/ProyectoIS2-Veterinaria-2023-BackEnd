@@ -1,2 +1,2 @@
-# ProyectoIS2-Veterinaria-2023-BackEnd
- BackEnd del proyecto veterinaria
+# ProyectoIS2-Veterinaria-2023
+ Proyecto Educativo - UDEC - 2023

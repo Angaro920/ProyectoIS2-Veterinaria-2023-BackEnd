@@ -1,0 +1,429 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+    <title>Shop product list - Bootdey.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css"></style>
+    <link rel="stylesheet" href="~/css/catFood.css" asp-append-version="true" />
+</head>
+<body>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <div class="container bootdey">
+        <div class="col-md-3">
+            <section class="panel">
+                <div class="panel-body">
+                    <input type="text" placeholder="Keyword Search" class="form-control" />
+                </div>
+            </section>
+            <section class="panel">
+                <header class="panel-heading">
+                    Categoria
+                </header>
+                <div class="panel-body">
+                    <ul class="nav prod-cat">
+                        <li>
+                            <a href="#" class="active"><i class="fa fa-angle-right"></i> Purina</a>
+                            <ul class="nav">
+                                <li class="active"><a href="#">- Gato</a></li>
+                                <li><a href="#">- Perro</a></li>
+                                <li><a href="#">- Pez</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-angle-right"></i> Humeda</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-angle-right"></i> Dietetica</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-angle-right"></i> Enlatados</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-angle-right"></i> Seca</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-angle-right"></i> Semi Humeda</a>
+                        </li> 
+                        <li>
+                            <a href="#"><i class="fa fa-angle-right"></i> Dieta Semi humeda</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-angle-right"></i> Dieta Enlatada</a>
+                        </li>             
+                        <li>
+                            <a href="#" class="active"><i class="fa fa-angle-right"></i> Edad</a>
+                            <ul class="nav">
+                                <li class="active"><a href="#">- Cachorros</a></li>
+                                <li><a href="#">- Adultos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="panel">
+                <header class="panel-heading">
+                    Rango de Precio
+                </header>
+                <div class="slid">
+                    <ul>
+                        <li>
+                            <label for="customRange1" class="form-label">Min</label> 
+                        </li>
+                        <li>
+                            <input type="range" class="form-range" id="customRange1">
+                        </li>
+                        <li>
+                            <label for="customRange1" class="form-label">Max</label>
+                        </li>
+                        <li>
+                            <input type="range" class="form-range" id="customRange1">
+                        </li> 
+                    </ul>
+                    
+                </div>
+            </section>
+            <section class="panel">
+                <header class="panel-heading">
+                    Filtrar
+                </header>
+                <div class="panel-body">
+                    <form role="form product-form">
+                        <div class="form-group">
+                            <label>Marca</label>
+                            <select class="form-control hasCustomSelect" style="-webkit-appearance: menulist-button; width: 231px; position: absolute; opacity: 0; height: 34px; font-size: 12px;">
+                                <option>Wiscas</option>
+                                <option>Monello</option>
+                                <option>Cipacan</option>
+                                <option>Smart</option>
+                            </select>
+                            <span class="customSelect form-control" style="display: inline-block;"><span class="customSelectInner" style="width: 209px; display: inline-block;">Seleccionar</span></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Peso</label>
+                            <select class="form-control hasCustomSelect" style="-webkit-appearance: menulist-button; width: 231px; position: absolute; opacity: 0; height: 34px; font-size: 12px;">
+                                <option>500mg</option>
+                                <option>1kg</option>
+                                <option>2.5kg</option>
+                                <option>25kg</option>
+                            </select>
+                            <span class="customSelect form-control" style="display: inline-block;"><span class="customSelectInner" style="width: 209px; display: inline-block;">Seleccionar</span></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Animal</label>
+                            <select class="form-control hasCustomSelect" style="-webkit-appearance: menulist-button; width: 231px; position: absolute; opacity: 0; height: 34px; font-size: 12px;">
+                                <option>Gato</option>
+                                <option>Perro</option>
+                                <option>Ave</option>
+                                <option>Peces</option>
+                            </select>
+                            <span class="customSelect form-control" style="display: inline-block;"><span class="customSelectInner" style="width: 209px; display: inline-block;">Seleccionar</span></span>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Filter</button>
+                    </form>
+                </div>
+            </section>
+            
+        </div>
+        <div class="col-md-9">
+            <section class="panel">
+                <div class="panel-body">
+                    <div class="pull-right">
+                        <ul class="pagination pagination-sm pro-page-list">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">»</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="row product-list">
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/FFB6C1/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/6495ED/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/FF7F50/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/00BFFF/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/00CED1/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/9400D3/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/FFD700/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/ADD8E6/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/20B2AA/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/3CB371/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/FFB6C1/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/C71585/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/191970/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/87CEEB/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="https://www.bootdey.com/image/250x220/FFB6C1/000000" alt />
+                            <a href="#" class="adtocart">
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title">
+                                    Comida Para [Mascota]
+                                </a>
+                            </h4>
+                            <p class="price">$300.00</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/7c772cca33.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+    </script>
+</body>
+</html>

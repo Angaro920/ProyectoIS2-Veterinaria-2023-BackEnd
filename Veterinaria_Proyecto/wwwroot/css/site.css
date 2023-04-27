@@ -1,0 +1,323 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+#Registro{
+    position:relative;
+    top:-80px;
+    color:black;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+.containerv {
+    position: relative;
+    left: 460px;
+    top: -300px;
+}
+.containerf {
+    position: relative;
+    left: 500px;
+    top: -300px;
+}
+.containerP {
+    position: relative;
+    left: 600px;
+    top: -500px;
+}
+
+.bodyb {
+    margin-bottom: 60px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.bodyv {
+    margin-bottom: 60px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.boton {
+    background: linear-gradient(white, indianred);
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 150px;
+    font-style: italic;
+}
+
+    .boton:hover {
+        width: 150px;
+        background: indianred;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        font-style: italic;
+    }
+.botonv {
+    background: linear-gradient(black, red);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 160px;
+    font-style: italic;
+}
+
+    .botonv:hover {
+        width: 160px;
+        background: red;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        font-style: italic;
+    }
+.botonp {
+    background: linear-gradient(black, red);
+    border: none;
+    color: white;
+    padding: 2px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 160px;
+    font-style: italic;
+}
+
+    .botonp:hover {
+        width: 160px;
+        background: red;
+        border: none;
+        color: white;
+        padding: 2px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        font-style: italic;
+    }
+.botonc {
+    background: linear-gradient(black, red);
+    border: none;
+    color: white;
+    padding: 2px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 160px;
+    font-style: italic;
+    position:relative;
+    left:1000px;
+}
+
+    .botonc:hover {
+        width: 160px;
+        background: red;
+        border: none;
+        color: white;
+        padding: 2px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        font-style: italic;
+    }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#lugar {
+}
+
+#contenedor {
+    position: relative;
+    width: 150px;
+    height: 510px;
+    background: linear-gradient(to left, white, indianred);
+}
+#contenedorv {
+    position: relative;
+    width: 160px;
+    height: 510px;
+    background: linear-gradient(to right, red, black);
+}
+
+
+#foot {
+    position: absolute;
+    bottom:0;
+    background: black;
+    width:100%;
+}
+
+.texto {
+    position: relative;
+    top: 30px;
+    text-align: center;
+    color: white;
+    height: 150px;
+    font-style: italic;
+    background-position: center center;
+    background-size: cover;
+}
+
+#encabezado {
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 120px;
+}
+
+#textoB {
+    position: relative;
+    top: 30px;
+    text-align: center;
+    color: white;
+    height: 100px;
+    font-size: x-large;
+    font-style: italic;
+    background-position: center center;
+}
+#Principal {
+    color: white;
+    font-style: italic;
+    font-size: x-large;
+    font-style: italic;
+}
+#Login {
+    position: relative;
+    left: 200px;
+    top: -450px;
+    color: white;
+    font-style: italic;
+    height: 80px;
+    font-weight: 900;
+}
+#btn {
+    background: linear-gradient(white, darkgray);
+    text-align: center;
+    color: black;
+    display: inline-block;
+    font-size: 16px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+#btn:hover{
+    background:red;
+    color:white
+}
+#btnr {
+    background: linear-gradient(black, red);
+    text-align: center;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+    #btnr:hover {
+        background: red;
+        color: white
+    }
+
+
+.btnpr {
+    background: linear-gradient(black, red);
+    text-align: center;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-weight: 500;
+    position:relative;
+
+    left:800px;
+}
+    .btnpr:hover {
+        background: red;
+        color: white
+    }
+#img1{
+    position:relative;
+    top:240px;
+    right:500px;
+}
+#img2 {
+    position: relative;
+    top: 20px;
+    left:300px;
+}
+#navbarTogglerDemo03 {
+    font-family: 'Bree Serif', serif;
+    font-size: 20pt;
+}
+
+#navbarTitle {
+    font-family: 'DynaPuff', cursive;
+    font-size: 25pt;
+}
+#im1 {
+    position: relative;
+    bottom: 150px;
+    left: 350px;
+    height: 200px;
+    width: 200px;
+}
+#im2 {
+    position:relative;
+    bottom:150px;
+    left:350px;
+    height: 200px;
+    width: 200px;
+}
+#cant1{
+    position:relative;
+    top:150px;
+    right:300px;
+    height:1px;
+    width:600px;
+}
+#cant2 {
+    position: relative;
+    bottom:45px;
+    left: 500px;
+    height: 1px;
+    width: 600px;
+}
+#Registrop{
+    color:black;
+}
