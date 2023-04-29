@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Veterinaria_Proyecto", "Veterinaria_Proyecto\Veterinaria_Proyecto.csproj", "{A7A6D2B4-FC4A-4A3E-86B6-9A4FF3F205B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Veterinaria_Proyecto_BackEnd", "Veterinaria_Proyecto\Veterinaria_Proyecto_BackEnd.csproj", "{A7A6D2B4-FC4A-4A3E-86B6-9A4FF3F205B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
