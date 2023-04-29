@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Angaro\\source\\repos\\ProyectoIS2-Veterinaria-2023\\Veterinaria_Proyecto\\Veterinaria_Proyecto.csproj",
-      "projectName": "Veterinaria_Proyecto",
-      "projectPath": "C:\\Users\\Angaro\\source\\repos\\ProyectoIS2-Veterinaria-2023\\Veterinaria_Proyecto\\Veterinaria_Proyecto.csproj",
+      "projectUniqueName": "C:\\Users\\Angaro\\Source\\Repos\\ProyectoIS2-Veterinaria-2023-BackEnd\\Veterinaria_Proyecto\\Veterinaria_Proyecto_BackEnd.csproj",
+      "projectName": "Veterinaria_Proyecto_BackEnd",
+      "projectPath": "C:\\Users\\Angaro\\Source\\Repos\\ProyectoIS2-Veterinaria-2023-BackEnd\\Veterinaria_Proyecto\\Veterinaria_Proyecto_BackEnd.csproj",
       "packagesPath": "C:\\Users\\Angaro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Angaro\\source\\repos\\ProyectoIS2-Veterinaria-2023\\Veterinaria_Proyecto\\obj\\",
+      "outputPath": "C:\\Users\\Angaro\\Source\\Repos\\ProyectoIS2-Veterinaria-2023-BackEnd\\Veterinaria_Proyecto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
