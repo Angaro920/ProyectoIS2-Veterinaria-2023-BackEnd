@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Veterinaria_Proyecto.props" />
-</Project>
