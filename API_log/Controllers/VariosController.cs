@@ -1,6 +1,7 @@
 ﻿using API_Log.Context;
+using API_Log.Helper;
 using API_Log.Models;
-
+using API_Log.Utilities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SimpleLogin.Helper;
@@ -19,24 +20,7 @@ namespace API_Log.Controllers
         {
             this.context = context;
         }
-        // GET: VariosController
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        // GET: VariosController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: VariosController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
+        
         // POST: VariosController/Create
         [HttpPost]
         [Route("Registrar")]
@@ -52,8 +36,9 @@ namespace API_Log.Controllers
                 }
                 else
                 {
-                    var hash = HashHelper.Hash(empleado.Contraseña);
-                    empleado.Contraseña = hash.Password;
+                    var hash = Encrypt.GetSHA256(empleado.Contraseña);
+                    empleado.Contraseña = hash;
+
                     context.Tbl_Empleados.Add(empleado);
                     context.SaveChanges();
 
@@ -65,48 +50,6 @@ namespace API_Log.Controllers
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
-            }
-        }
-
-        // GET: VariosController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: VariosController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: VariosController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: VariosController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
             }
         }
     }

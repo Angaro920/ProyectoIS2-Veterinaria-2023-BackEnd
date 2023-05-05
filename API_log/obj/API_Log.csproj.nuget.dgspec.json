@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\acruz\\source\\repos\\API_log\\API_Log\\API_Log.csproj": {}
+    "C:\\Users\\acruz\\Source\\Repos\\ProyectoIS2-Veterinaria-2023-BackEnd\\API_Log\\API_Log.csproj": {}
   },
   "projects": {
-    "C:\\Users\\acruz\\source\\repos\\API_log\\API_Log\\API_Log.csproj": {
+    "C:\\Users\\acruz\\Source\\Repos\\ProyectoIS2-Veterinaria-2023-BackEnd\\API_Log\\API_Log.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acruz\\source\\repos\\API_log\\API_Log\\API_Log.csproj",
+        "projectUniqueName": "C:\\Users\\acruz\\Source\\Repos\\ProyectoIS2-Veterinaria-2023-BackEnd\\API_Log\\API_Log.csproj",
         "projectName": "API_Log",
-        "projectPath": "C:\\Users\\acruz\\source\\repos\\API_log\\API_Log\\API_Log.csproj",
+        "projectPath": "C:\\Users\\acruz\\Source\\Repos\\ProyectoIS2-Veterinaria-2023-BackEnd\\API_Log\\API_Log.csproj",
         "packagesPath": "C:\\Users\\acruz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acruz\\source\\repos\\API_log\\API_Log\\obj\\",
+        "outputPath": "C:\\Users\\acruz\\Source\\Repos\\ProyectoIS2-Veterinaria-2023-BackEnd\\API_Log\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -62,7 +62,7 @@
             },
             "Microsoft.IdentityModel.JsonWebTokens": {
               "target": "Package",
-              "version": "[6.30.0, )"
+              "version": "[6.16.0, )"
             },
             "Microsoft.OpenApi": {
               "target": "Package",
@@ -70,19 +70,15 @@
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.3, )"
+              "version": "[13.0.1, )"
             },
-            "Swashbuckle.AspNetCore.SwaggerGen": {
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[3.0.0, )"
-            },
-            "Swashbuckle.AspNetCore.SwaggerUI": {
-              "target": "Package",
-              "version": "[3.0.0, )"
+              "version": "[5.4.1, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.30.0, )"
+              "version": "[6.16.0, )"
             }
           },
           "imports": [

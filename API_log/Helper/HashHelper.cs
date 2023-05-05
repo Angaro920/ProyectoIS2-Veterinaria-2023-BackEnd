@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleLogin.Helper
+namespace API_Log.Helper
 {
     public class HashHelper
     {
