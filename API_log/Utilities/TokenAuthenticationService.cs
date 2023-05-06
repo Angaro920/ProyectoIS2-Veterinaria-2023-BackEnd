@@ -31,7 +31,7 @@ namespace API_Log.Utilities
             if (!_userService.IsValid(request))
                 return false;
 
-            var user = context.Tbl_Empleados.FirstOrDefault(f => f.Usuario == request.Username);
+            var user = context.TblEmpleados.FirstOrDefault(f => f.Usuario == request.Username);
             if (user != null) {
                 var PasswordEncrypt = Encrypt.GetSHA256(request.Password);
                 if (user.Contraseña.Equals(PasswordEncrypt))

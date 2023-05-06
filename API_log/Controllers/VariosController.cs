@@ -24,11 +24,11 @@ namespace API_Log.Controllers
         // POST: VariosController/Create
         [HttpPost]
         [Route("Registrar")]
-        public ActionResult Post([FromBody] Tbl_Empleados empleado)
+        public ActionResult Post([FromBody] TblEmpleados empleado)
         {
              try 
             { 
-                var empleadoExist= context.Tbl_Empleados.Where(p=>p.ID_Empleado==empleado.ID_Empleado).FirstOrDefault();
+                var empleadoExist= context.TblEmpleados.Where(p=>p.IdEmpleado ==empleado.IdEmpleado).FirstOrDefault();
                 if (empleadoExist!=null)
                 {
                     return Ok("Username ya registrado");
@@ -39,7 +39,7 @@ namespace API_Log.Controllers
                     var hash = Encrypt.GetSHA256(empleado.Contraseña);
                     empleado.Contraseña = hash;
 
-                    context.Tbl_Empleados.Add(empleado);
+                    context.TblEmpleados.Add(empleado);
                     context.SaveChanges();
 
                 }
