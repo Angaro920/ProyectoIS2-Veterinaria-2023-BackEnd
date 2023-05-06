@@ -38,7 +38,7 @@ namespace API_Log.Controllers
         {
             var producto = new TblProductos()
             {
-                IdProducto = dbContext.TblTipoMascota.Max(x => x.IdTipoMascota) + 1,
+                IdProducto = dbContext.TblProductos.Max(x => x.IdProducto) + 1,
                 Nombre = addProducto.Nombre,
                 Marca = addProducto.Marca,
                 Descripcion = addProducto.Descripcion,
@@ -71,7 +71,7 @@ namespace API_Log.Controllers
         [Route("{IdProducto}")]
         public async Task<IActionResult> DeleteProducto([FromRoute] int IdProducto)
         {
-            var producto = await dbContext.TblTipoMascota.FindAsync(IdProducto);
+            var producto = await dbContext.TblProductos.FindAsync(IdProducto);
             if (producto != null)
             {
                 dbContext.Remove(producto);
