@@ -39,7 +39,11 @@ namespace API_Log.Controllers
             var producto = new TblProductos()
             {
                 IdProducto = dbContext.TblTipoMascota.Max(x => x.IdTipoMascota) + 1,
-                Nombre = addProducto.Nombre
+                Nombre = addProducto.Nombre,
+                Marca = addProducto.Marca,
+                Descripcion = addProducto.Descripcion,
+                Precio = addProducto.Precio,
+                Exitencias = addProducto.Exitencias
             };
 
             await dbContext.TblProductos.AddAsync(producto);
