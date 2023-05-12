@@ -214,7 +214,7 @@ namespace API_Log.Context
 
                 entity.Property(e => e.IdMascota)
                     .HasColumnName("ID_Mascota")
-                    .ValueGeneratedNever();
+                    .ValueGeneratedOnAdd();
 
                 entity.Property(e => e.FkIdCliente).HasColumnName("FK_ID_Cliente");
 

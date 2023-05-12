@@ -20,7 +20,19 @@ namespace API_Log.Controllers
         [HttpGet]
         public async Task<IActionResult> GetProductos()
         {
-            return Ok(await dbContext.TblProductos.ToListAsync());
+            var resp = await dbContext.TblProductos
+                 .Select(m => new
+                 {
+                     m.IdProducto,
+                     m.Nombre,
+                     m.Precio,
+                     m.Marca,
+                     m.Descripcion
+                    
+                 })
+                 .ToListAsync();
+
+            return Ok(resp);
         }
         [HttpGet]
         [Route("{IdProducto}")]
@@ -60,6 +72,11 @@ namespace API_Log.Controllers
             if (producto != null)
             {
                 producto.Nombre = updateProductoRequest.Nombre;
+                producto.Marca = updateProductoRequest.Marca;
+                producto.Descripcion = updateProductoRequest.Descripcion;
+                producto.Precio = updateProductoRequest.Precio;
+                producto.Exitencias = updateProductoRequest.Exitencias;
+                producto.Exitencias = updateProductoRequest.Exitencias;
 
                 await dbContext.SaveChangesAsync();
 

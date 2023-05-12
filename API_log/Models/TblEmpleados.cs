@@ -12,17 +12,14 @@ namespace API_Log.Models
             }
             [Key]
             public int IdEmpleado { get; set; }
-            [Required, NotNull]
             public string Usuario { get; set; }
-            [Required, NotNull]
             public string Contraseña { get; set; }
-            [Required, NotNull]
             public string Rol { get; set; }
-            [Required, NotNull]
             public int FkIdEstado { get; set; }
 
             public virtual TblEstados FkIdEstadoNavigation { get; set; }
             public virtual ICollection<TblHistoriaClinica> TblHistoriaClinica { get; set; }
-        }
     }
+}
+
 
