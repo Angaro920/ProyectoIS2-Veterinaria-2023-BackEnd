@@ -6,6 +6,7 @@ using System;
 using API_Log.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using System.Data.Entity;
 
 namespace API_Log.Controllers
 {
@@ -23,14 +24,23 @@ namespace API_Log.Controllers
         [HttpGet]
         public async Task<IActionResult> GetRaza()
         {
-            return Ok(await dbContext.TblRaza.ToListAsync());
+            var resp = await dbContext.TblRaza.Select(e => new
+            { 
+                e.IdRaza,
+                e.Nombre
+            }).ToListAsync();
+            return Ok(resp);
         }
 
         [HttpGet]
         [Route("{IdRaza}")]
         public async Task<IActionResult> GetRaza([FromRoute] int IdRaza)
         {
-            var raza = await dbContext.TblRaza.FindAsync(IdRaza);
+            var raza = await dbContext.TblRaza.Where(e => e.IdRaza == IdRaza).Select(e => new
+            { 
+                e.IdRaza,
+                e.Nombre
+            }).FirstOrDefaultAsync();
             if (raza == null)
             {
                 return NotFound();

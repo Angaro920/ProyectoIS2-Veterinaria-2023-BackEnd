@@ -39,7 +39,19 @@ namespace API_Log.Controllers
         [Route("{IdCliente}")]
         public async Task<IActionResult> GetCliente([FromRoute] int IdCliente)
         {
-            var Cliente = await dbContext.TblCliente.FindAsync(IdCliente);
+            var Cliente = await dbContext.TblCliente.Where(e => e.IdCliente == IdCliente).Select(e => new 
+            { 
+                e.IdCliente,
+                e.Nombre,
+                e.Cedula,
+                e.Celular,
+                e.Correo,
+                Estado = new 
+                {
+                    e.FkIdEstadoNavigation.IdEstado,
+                    e.FkIdEstadoNavigation.Nombre
+                }
+            }).FirstOrDefaultAsync();
             if (Cliente == null)
             {
                 return NotFound();

@@ -50,7 +50,26 @@ namespace API_Log.Controllers
         [Route("{IdMascota}")]
         public async Task<IActionResult> GetMascota([FromRoute] int IdMascota)
         {
-            var Mascota = await dbContext.TblMascotas.FindAsync(IdMascota);
+            var Mascota = await dbContext.TblMascotas.Where(e=> e.IdMascota== IdMascota).Select(e => new 
+            {
+                e.IdMascota,
+                e.Nombre,
+                Estado = new
+                {
+                    e.FkIdEstadoNavigation.IdEstado,
+                    e.FkIdEstadoNavigation.Nombre
+                },
+                TipoMascota = new
+                {
+                    e.FkIdTipoMascotaNavigation.IdTipoMascota,
+                    e.FkIdTipoMascotaNavigation.Nombre
+                },
+                Raza = new
+                {
+                    e.FkIdRazaNavigation.IdRaza,
+                    e.FkIdRazaNavigation.Nombre
+                }
+            }).FirstOrDefaultAsync();
             if (Mascota == null)
             {
                 return NotFound();

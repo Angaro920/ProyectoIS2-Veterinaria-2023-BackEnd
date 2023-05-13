@@ -20,13 +20,22 @@ namespace API_Log.Controllers
         [HttpGet]
         public async Task<IActionResult> GetEstados()
         {
-            return Ok(await dbContext.TblEstados.ToListAsync());
+            var resp = await dbContext.TblEstados.Select(e => new
+            { 
+                e.IdEstado,
+                e.Nombre
+            }).ToListAsync();
+            return Ok(resp);
         }
         [HttpGet]
         [Route("{IdEstado}")]
         public async Task<IActionResult> GetEstado([FromRoute] int IdEstado)
         {
-            var Estado = await dbContext.TblEstados.FindAsync(IdEstado);
+            var Estado = await dbContext.TblEstados.Where(e => e.IdEstado == IdEstado).Select(e => new 
+            { 
+               e.IdEstado,
+               e.Nombre
+            }).FirstOrDefaultAsync();
             if (Estado == null)
             {
                 return NotFound();

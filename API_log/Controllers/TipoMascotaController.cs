@@ -20,13 +20,22 @@ namespace API_Log.Controllers
         [HttpGet]
         public async Task<IActionResult> GetTipoMascota()
         {
-            return Ok(await dbContext.TblTipoMascota.ToListAsync());
+            var resp = await dbContext.TblTipoMascota.Select(e => new
+            { 
+                e.IdTipoMascota,
+                e.Nombre
+            }).FirstOrDefaultAsync();
+            return Ok(resp);
         }
         [HttpGet]
         [Route("{IdTipoMascota}")]
         public async Task<IActionResult> GetTipoMascota([FromRoute] int IdTipoMascota)
         {
-            var tipoMascota = await dbContext.TblTipoMascota.FindAsync(IdTipoMascota);
+            var tipoMascota = await dbContext.TblTipoMascota.Where(e => e.IdTipoMascota == IdTipoMascota).Select(e => new
+            { 
+                e.IdTipoMascota,
+                e.Nombre
+            }).FirstOrDefaultAsync();
             if (tipoMascota == null)
             {
                 return NotFound();

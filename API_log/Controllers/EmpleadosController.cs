@@ -40,7 +40,19 @@ namespace API_Log.Controllers
         [Route("{IdEmpleado}")]
         public async Task<IActionResult> GetEmpleado([FromRoute] int IdEmpleado)
         {
-            var Empleado = await dbContext.TblEmpleados.FindAsync(IdEmpleado);
+            var Empleado = await dbContext.TblEmpleados.Where(e => e.IdEmpleado == IdEmpleado).Select(e => new
+            { 
+                e.IdEmpleado,
+                e.Usuario,
+                e.Contraseña,
+                e.Rol,
+                Estado = new
+                { 
+                    e.FkIdEstadoNavigation.IdEstado,
+                    e.FkIdEstadoNavigation.Nombre
+                }
+
+            }).FirstOrDefaultAsync();
             if (Empleado == null)
             {
                 return NotFound();

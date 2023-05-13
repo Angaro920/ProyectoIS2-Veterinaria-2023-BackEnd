@@ -38,7 +38,15 @@ namespace API_Log.Controllers
         [Route("{IdProducto}")]
         public async Task<IActionResult> GetProducto([FromRoute] int IdProducto)
         {
-            var producto = await dbContext.TblProductos.FindAsync(IdProducto);
+            var producto = await dbContext.TblProductos.Where(e => e.IdProducto == IdProducto).Select(e => new
+            {
+                e.IdProducto,
+                e.Nombre,
+                e.Marca,
+                e.Descripcion,
+                e.Precio,
+                e.Exitencias
+            }).FirstOrDefaultAsync();
             if (producto == null)
             {
                 return NotFound();
