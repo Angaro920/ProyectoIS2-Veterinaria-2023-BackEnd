@@ -22,7 +22,7 @@ namespace API_Log.Controllers
         }
  
         [HttpPost, Route("sendEmail")]
-        public async Task<ActionResult> RequestToken([FromBody] EmailRequestModel request)
+        public ActionResult RequestToken([FromBody] EmailRequestModel request)
         {
             EmailResponseModel emailResponseModel = new EmailResponseModel();
             var user = dbContext.TblEmpleados.FirstOrDefault(f => f.Usuario == request.Usuario);
