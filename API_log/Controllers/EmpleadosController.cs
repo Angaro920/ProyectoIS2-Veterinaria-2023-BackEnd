@@ -36,22 +36,38 @@ namespace API_Log.Controllers
             }).ToListAsync();
             return Ok(resp);
         }
-        [HttpGet]
-        [Route("{IdEmpleado}")]
-        public async Task<IActionResult> GetEmpleado([FromRoute] int IdEmpleado)
-        {
-            var Empleado = await dbContext.TblEmpleados.Where(e => e.IdEmpleado == IdEmpleado).Select(e => new
-            { 
-                e.IdEmpleado,
-                e.Usuario,
-                e.Contraseña,
-                e.Rol,
-                Estado = new
-                { 
-                    e.FkIdEstadoNavigation.IdEstado,
-                    e.FkIdEstadoNavigation.Nombre
-                }
+        /*   [HttpGet]
+           [Route("{IdEmpleado}")]
+           public async Task<IActionResult> GetEmpleado([FromRoute] int IdEmpleado)
+           {
+               var Empleado = await dbContext.TblEmpleados.Where(e => e.IdEmpleado == IdEmpleado).Select(e => new
+               { 
+                   e.IdEmpleado,
+                   e.Usuario,
+                   e.Contraseña,
+                   e.Rol,
+                   Estado = new
+                   { 
+                       e.FkIdEstadoNavigation.IdEstado,
+                       e.FkIdEstadoNavigation.Nombre
+                   }
 
+               }).FirstOrDefaultAsync();
+               if (Empleado == null)
+               {
+                   return NotFound();
+               }
+               return Ok(Empleado);
+           }
+        */
+        [HttpGet]
+        [Route("{RolEmpleado}")]
+        public async Task<IActionResult> RolEmpleado([FromRoute] string RolEmpleado)
+        {
+            var Empleado = await dbContext.TblEmpleados.Where(e => e.Usuario == RolEmpleado).Select(e => new
+            {
+                e.Usuario,
+                e.Rol,
             }).FirstOrDefaultAsync();
             if (Empleado == null)
             {
@@ -59,6 +75,7 @@ namespace API_Log.Controllers
             }
             return Ok(Empleado);
         }
+
         [HttpPost]
         public async Task<IActionResult> AddEmpleado(EmpleadosRequest addEmpleado)
         {

@@ -32,14 +32,14 @@ namespace API_Log.Controllers
             LoginResponseModel loginResponseModel = new LoginResponseModel();
             loginResponseModel.Respuesta = 0;
             loginResponseModel.Token = null;
-            loginResponseModel.Mensaje = "Usuario y/o Contraseña Incorrectos";
-
+            loginResponseModel.Mensaje = "Incorrectos";
+         
             string token;
             if (_authService.IsAuthenticated(request, out token))
             {
                 loginResponseModel.Respuesta = 1;
                 loginResponseModel.Token = token;
-                loginResponseModel.Mensaje = "Login Exitoso";
+                loginResponseModel.Mensaje = "Exito";
             }
 
             return Ok(loginResponseModel);

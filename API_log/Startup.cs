@@ -125,7 +125,7 @@ namespace API_Log
             app.UseAuthentication();
             app.UseSwagger();
             app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "Veterinaria_API"); });
-            app.UseCors(x => x.WithOrigins("www.google.com", "https://localhost:8085").AllowAnyMethod().AllowAnyHeader());// global cors policy - .WithOrigins("")
+            app.UseCors(x => x.WithOrigins("www.google.com", "https://localhost:44326").AllowAnyMethod().AllowAnyHeader());// global cors policy - .WithOrigins("")
             app.UseRouting();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>

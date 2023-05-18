@@ -10,11 +10,12 @@ namespace API_Log.Utilities
         private MailMessage email;
         private string Host = "smtp.gmail.com";
         private int Port = 587;
-        private string User = "owlblack10@gmail.com";
-        private string Password = "rtliqpogvcgcmaca";//Contraseña de Aplicación
+        private string User = "acruzardila23@gmail.com";
+        private string Password = "vnucooikapcvqnkz";//Contraseña de Aplicación
         private bool EnabledSSL = true;
 
-    public EmailService()
+
+        public EmailService()
         {
             cliente = new SmtpClient()
             {

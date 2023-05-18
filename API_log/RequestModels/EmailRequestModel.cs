@@ -10,5 +10,7 @@ namespace API_Log.RequestModels
         public string Destinatario { get; set; }
         public string Asunto { get; set; }
         public string Usuario { get; set; }
+        public int IdHistoriaClinica { get; set; }
+        public int IdMascota { get; set; }
     }
 }
